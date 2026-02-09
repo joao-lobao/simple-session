@@ -19,7 +19,7 @@ Add this in your init.lua or plugins.lua:
 
 ```lua
 {
-  "joao-lobao/simple-session",
+  "joao-lobao/simple-session.nvim",
   config = function()
     require("simple-session").setup()
   end
@@ -32,7 +32,7 @@ configuration by changing the properties inside the setup function.
 
 ```lua
 {
-  "joao-lobao/simple-session",
+  "joao-lobao/simple-session.nvim",
   config = function()
     require("simple-session").setup({
         -- default configurations
