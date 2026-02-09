@@ -126,21 +126,15 @@ local function setup_keymaps()
 	local keymap_opts = { noremap = true, silent = false }
 
 	if M.config.keymaps.load ~= "" then
-		vim.keymap.set("n", M.config.keymaps.load, function()
-			M.load()
-		end, keymap_opts)
+		vim.keymap.set("n", M.config.keymaps.load, ":SLoad<CR>", keymap_opts)
 	end
 
 	if M.config.keymaps.create ~= "" then
-		vim.keymap.set("n", M.config.keymaps.create, function()
-			M.create()
-		end, keymap_opts)
+		vim.keymap.set("n", M.config.keymaps.create, ":SCreate<CR>", keymap_opts)
 	end
 
 	if M.config.keymaps.delete ~= "" then
-		vim.keymap.set("n", M.config.keymaps.delete, function()
-			M.delete()
-		end, keymap_opts)
+		vim.keymap.set("n", M.config.keymaps.delete, ":SDelete<CR>", keymap_opts)
 	end
 end
 
